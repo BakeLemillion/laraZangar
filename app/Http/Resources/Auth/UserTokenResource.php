@@ -18,7 +18,7 @@ class UserTokenResource extends JsonResource
             'id' => $this->id,
             'email' => $this->email,
             'name' => $this->name,
-            'token' => $this->resource->createToken(time()),
+            'token' => $this->resource->createToken(time())->plainTextToken,
         ];
     }
 }
